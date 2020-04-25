@@ -1,14 +1,10 @@
-
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot, has_permissions
 import _asyncio
 
 import sys
-sys.path.append("C:\\Users\\bmood\\PycharmProjects\\SteamInfoPuller\\venv\\")
-sys.path.append("C:\\Users\\bmood\\PycharmProjects\\FlipCalc\\venv\\")
 sys.path.append("C:\\Users\\bmood\\PycharmProjects\\PrivateItems\\")
-
 
 import SteamInfoPuller
 import Flip
