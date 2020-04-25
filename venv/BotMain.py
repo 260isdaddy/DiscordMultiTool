@@ -26,7 +26,7 @@ async def on_ready():
 ############COMMANDS###############################################################
 @client.command()
 async def ping(ctx):
-    await ctx.channel.send("go away idiot")
+    await ctx.channel.send("go away idiot (took {}".format(int(client.latency * 1000)) + "ms to flame.)")
 
 @client.command()
 async def rsitem(ctx, *item):
