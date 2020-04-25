@@ -104,15 +104,15 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
-# Environments **TODO: Cleanup of this**
+# Environments
 .env
-#.venv
+.venv
 env/
-#venv/
+venv/
 ENV/
 env.bak/
-#venv.bak/
-venv/Scripts/
+venv.bak/
+helpers/DiscordBotKey.py
 
 # Spyder project settings
 .spyderproject

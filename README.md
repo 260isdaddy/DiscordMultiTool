@@ -8,10 +8,10 @@
 
 ### Requirements
  - Python3
- - The key has to be provided in a **DiscordBotKey.py** file like this:
+ - The key has to be provided in a **DiscordBotKey.py** file inside **helpers** folder like this:
 
-		private_Key("key here") 
+		private_Key = 'Private key aka. Token here' 
 
 
 ### Run
-To start: In **./venv** folder run **BotMain.py** file.
+To start: Simply run **startup.bat** file.
