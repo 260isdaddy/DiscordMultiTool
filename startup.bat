@@ -1,10 +1,14 @@
-try py -3 -m pip
-catch py -3 -m pip install –-upgrade pip --user
+cls
+py -3 -m pip >nul
+IF %ERRORLEVEL% NEQ 0 py -3 -m pip install pip --user
 
-try py -3 -m discord
-catch python3 -3 -m pip install -U discord.py[voice] --user
+py -3 -m discord >nul
+IF %ERRORLEVEL% NEQ 0 py -3 -m pip install -U discord.py[voice] --user
 
+py -3 -m requests >nul
+IF %ERRORLEVEL% NEQ 0 py -3 -m pip install -U requests --user
 
+py -3 -m BeautifulSoup4 >nul
+IF %ERRORLEVEL% NEQ 0 py -3 -m pip install -U BeautifulSoup4 --user
 
-
-python3 venv/BotMain.py
+py BotMain.py
