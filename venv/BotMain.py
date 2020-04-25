@@ -20,7 +20,7 @@ client = commands.Bot(command_prefix='$')
 
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Game('Fuk u idot moder idot bich'))
+    await client.change_presence(status=discord.Status.online, activity=discord.Game('idk wat dat'))
     print('Bot logging in as {0.user}'.format(client))
 
 ############COMMANDS###############################################################
