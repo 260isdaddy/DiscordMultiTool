@@ -1,10 +1,17 @@
 import json
 import os
 from urllib.request import urlopen
+from pathlib import Path
 
-os.chdir("../venv")
+# Path logic
+path = Path(os.getcwd())
+levels_up = 1
 
-steam_string = open('C:/Users/bmood/PycharmProjects/testing/steamstuff.json','r',encoding='utf-8')
+rootDir = str(path.parents[levels_up-1])
+
+steam_string = open(rootDir + '\\' + 'steamstuff.json','r',encoding='utf-8')
+
+# Path Logic End
 
 # BINGOOOOO print(data['app'])
 data = json.load(steam_string)
