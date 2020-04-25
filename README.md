@@ -4,6 +4,7 @@
 
  - Runescape item price search
  - Steam game search
+ - Ping command for checking bot latency
 
 ### Requirements
  - Python3
