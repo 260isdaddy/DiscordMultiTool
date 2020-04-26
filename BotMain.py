@@ -5,8 +5,6 @@ from discord.ext import commands
 from discord.ext.commands import Bot, has_permissions
 import _asyncio
 
-import sys
-sys.path.append("C:\\Users\\bmood\\PycharmProjects\\PrivateItems\\") # don't need this
 
 import helpers.SteamInfoPuller
 import helpers.Flip
