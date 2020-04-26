@@ -20,7 +20,9 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=discord.Game('idk wat dat')) # activity changes the "Playing" section of the status profile
     print('Bot logging in as {0.user}'.format(client))
 
-############COMMANDS###############################################################
+###################################################################################
+############   COMMANDS START HERE  #########################################################
+
 @commands.cooldown(1, 3, commands.BucketType.guild)
 @client.command()
 async def ping(ctx):
@@ -41,15 +43,13 @@ async def kill(ctx, amt):
         await ctx.channel.send("Killed {}".format(amt) + " messages.")
 
 @client.command()
-async def steam(ctx, game_name):
+async def steam(ctx, *game_name):
     if ctx.author.id != 267402012742778891:
-        game_name = message.content[7:]
+        game_name = (" ".join(game_name[:]))
         await ctx.channel.send(helpers.SteamInfoPuller.steamGameSearch(game_name))
 
-
-
-
-###### commands end here #######################################################
+###### END OF COMMANDS #########################################################
+################################################################################
 
 @client.event
 async def on_message(message):
@@ -72,7 +72,7 @@ async def on_message(message):
             if "dark souls" in message.content.lower():
                 await message.add_reaction(emoji='😔')
 
-    if message.guild.id == 213330594749349888: #ninjacord ###################################################
+    if message.guild.id == 213330594749349888: # ninjacord ###################################################
         if message.content.startswith("$classhelp"):
             await message.channel.send("Remember to direct all ninja/kuno questions to the channels #ninja-help and #kuno-help!")
         
