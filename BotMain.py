@@ -22,6 +22,7 @@ async def on_ready():
     print('Bot logging in as {0.user}'.format(client))
 
 ############COMMANDS###############################################################
+@commands.cooldown(1, 3, commands.BucketType.guild)
 @client.command()
 async def ping(ctx):
     await ctx.channel.send("go away idiot (took {}".format(int(client.latency * 1000)) + "ms to flame.)")
@@ -51,7 +52,7 @@ async def on_message(message):
         #if message.content == 'test':
         #    await message.channel.send(message.guild)
 
-        if "spopy" in message.content.lower():
+        if "spopy" in message.content.lower() or "spop" in message.content.lower():
             # await message.add_reaction(emoji='❓')
             await message.add_reaction(emoji='❓')
 
@@ -63,7 +64,7 @@ async def on_message(message):
 
         if message.content.startswith('$steam'):
             game_name = message.content[7:]
-            await message.channel.send(SteamInfoPuller.steamGameSearch(game_name))
+            await message.channel.send(helpers.SteamInfoPuller.steamGameSearch(game_name))
 
         if message.author.id == 578771603475791893:
             if "dark souls" in message.content.lower():
@@ -73,7 +74,7 @@ async def on_message(message):
         if message.content.startswith('!spopy7'):
             await message.channel.send('https://gyazo.com/77a9b9d4cc3890b70eed030fa7d51a87')
 
-        if "spopy" in message.content.lower():
+        if "spopy" in message.content.lower() or "spop" in message.content.lower():
             await message.add_reaction(emoji='<:What: 271214076728836096 >')
 
 # Changed to a try/catch because people don't read ReadMe usually
